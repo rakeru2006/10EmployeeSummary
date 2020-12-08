@@ -99,7 +99,7 @@ const promptUser = () => {
     <div class="container">
       <h1 class="display-4"> Team Name  ${answers.nameTeam}</h1>
       <p class="lead">Description.</p>
-      <h3>Name: ${answers.amePerson} <span class="badge badge-secondary">Job Position : ${answers.title}</span></h3>
+      <h3>Name: ${answers.namePerson} <span class="badge badge-secondary">Job Position : ${answers.title}</span></h3>
       <ul class="list-group">
         <li class="list-group-item"> <b>Id:</b>  :${answers.id}</li>
         <li class="list-group-item"><b>Email:</b>  ${answers.email}</li>
@@ -112,7 +112,7 @@ const promptUser = () => {
   </html>`;
   
   // Bonus using async/await and try/catch
-  const init = async () => {
+  const initEngineer = async () => {
     console.log('Please answer the questions' );
     try {
       const answers = await promptUser();
@@ -127,4 +127,4 @@ const promptUser = () => {
     }
   };
   
-  init();
+  initEngineer();
