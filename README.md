@@ -6,7 +6,7 @@
 
 Created by Raquel Ceron
 
-This project  run in this github repository [Github](https://github.com/rakeru2006/html-node)
+This project  run in this github repository [Github](https://github.com/rakeru2006/10EmployeeSummary)
 and can visualize in [Github pages](https://rakeru2006.github.io/html-node/)
 
 
