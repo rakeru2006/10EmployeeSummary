@@ -112,9 +112,9 @@ Demo aplication
 
 
 
-![demo1](https://github.com/rakeru2006/10EmployeeSummary/blob/master/managerinf.jpg)
-![demo2](https://github.com/rakeru2006/10EmployeeSummary/blob/master/information.jpg)
-![demo2](https://github.com/rakeru2006/10EmployeeSummary/blob/master/demofin.png)
+![demo1](https://github.com/rakeru2006/10EmployeeSummary/blob/master/managerinf.png)
+![demo2](https://github.com/rakeru2006/10EmployeeSummary/blob/master/information.png)
+![demo3](https://github.com/rakeru2006/10EmployeeSummary/blob/master/demofin.png)
 
 ## Contributing  :man_with_gua_pi_mao:
 ***
