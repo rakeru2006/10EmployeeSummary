@@ -9,80 +9,42 @@ const promptUser = () => {
   return inquirer.prompt([
 
         {
-          //  GIVEN a command-line application that accepts user input
-          name: 'nameTeam',
-          type: 'input',
-          message: 'What is the name of the Team?',
-          default : 'TEC-MONTERREY',
-        },
-       
-        {
           name: 'namePerson',
           type: 'input',
           message: 'What is the name of Intern',
-          default : 'John',
+          default : 'John I',
         },
         {
           name: 'jobTitleP',
           type: 'input',
-          message: 'What is the job title of Intern',
+          message: 'What is the job title ',
           default : 'Intern',
 
         },
-        {
-          name: 'title',
-          type: 'rawlist',
-          message: 'Select Title',
-          choices:[ 'Manager','Engineer','Intern',]
-          
-        },
+
         {
           name: 'id',
           type: 'input',
           message: 'What is the ID Intern',
-          default : '5',
+          default : 'IID5',
         },
         {
           name: 'email',
           type: 'input',
           message: 'What is the Email Intern',
-          default : 'johnd@fakemail.com',
+          default : 'johnd@fakemailnitern.com',
         },
         {
           name: 'school',
           type: 'input',
           message: 'What is school  Intern',
-          default : 'University Tec Monterrey',
+          default : 'University I Tec Monterrey',
         },
-          {
-            name: 'menu',
-            type: 'checkbox',
-            message: 'Select menu of data to show:',
-            choices:['ID:1',
-                    'Email:jared@fakemail.com',
-                    'Office number:1',
-                  ]
-          },
 
     ]);
   };
   
-        /*We add a newline character to the command line argument
-      .then(answers =>{
-          console.log('Answer:  ',answers)
-       
-      })
-     
-   
-
   
-
-      // We add a newline character to the command line argument
-      fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
-        err ? console.error(err) : console.log('Commit logged!')
-      );
-      
-   */
   const generateHTMLMIntern = (answers) =>
   `<!DOCTYPE html>
   <html lang="en">
@@ -96,7 +58,7 @@ const promptUser = () => {
   <body>
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4"> Team Name  ${answers.nameTeam}</h1>
+      <h1 class="display-4"> Team Member Intern</h1>
       <p class="lead">Description.</p>
       <h3>Name: ${answers.namePerson} <span class="badge badge-secondary">Job Position : ${answers.title}</span></h3>
       <ul class="list-group">
@@ -110,8 +72,8 @@ const promptUser = () => {
   </body>
   </html>`;
   
-  // Bonus using async/await and try/catch
-  const init = async () => {
+ 
+  const intern= async () => {
     console.log('Please answer the questions' );
     try {
       const answers = await promptUser();
@@ -126,4 +88,4 @@ const promptUser = () => {
     }
   };
   
-  init();
+  intern();
