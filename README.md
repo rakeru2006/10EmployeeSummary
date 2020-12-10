@@ -112,8 +112,9 @@ Demo aplication
 
 
 
-![demo1](https://pbs.twimg.com/profile_images/1053055123193122816/managerinf.jpg)
-![demo2](https://pbs.twimg.com/profile_images/1053055123193122816/information.jpg)
+![demo1](https://github.com/rakeru2006/10EmployeeSummary/blob/master/managerinf.jpg)
+![demo2](https://github.com/rakeru2006/10EmployeeSummary/blob/master/information.jpg)
+![demo2](https://github.com/rakeru2006/10EmployeeSummary/blob/master/demofin.png)
 
 ## Contributing  :man_with_gua_pi_mao:
 ***
