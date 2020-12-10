@@ -16,95 +16,84 @@ const promptUser = () => {
           message: 'What is the name of the Team?',
           default : 'TEC-MONTERREY',
         },
-       
         {
-          name: 'namePerson',
+          name: 'nameManager',
           type: 'input',
           message: 'What is the name of Manager',
           default : 'Jared',
         },
         {
-          name: 'jobTitleP',
+          name: 'roleManager',
           type: 'input',
-          message: 'What is the job title of Manager',
-          default : 'Manager, Engineer, Intern,',
-
+          message: 'What is the job title :',
+          default : 'Manager',
         },
         {
-          name: 'title',
-          type: 'rawlist',
-          message: 'Select Title',
-          choices:[ 'Manager','Engineer','Intern',]
-          
+          name: 'idManager',
+          type: 'input',
+          message: 'What is the ID Manager:',
+          default : 'MID1',
         },
         {
-          name: 'id',
+          name: 'emailManager',
           type: 'input',
-          message: 'What is the ID Manager',
-          default : 'ID12345',
-        },
-        {
-          name: 'email',
-          type: 'input',
-          message: 'What is the Email Manager',
-          default : 'jared@fakemail.com',
+          message: 'What is the Email Manager:',
+          default : 'Jared@fakemailManager.com',
         },
         {
           name: 'officeNumber',
           type: 'input',
-          message: 'What is the Office number  Manager',
+          message: 'What is the Office number Manager',
           default : '555-555-555',
         },
-          {
-            name: 'menu',
-            type: 'checkbox',
-            message: 'Select menu of data to show:',
-            choices:['ID:1',
-                    'Email:jared@fakemail.com',
-                    'Office number:1',
-                  ]
-          },
+        {
+          name: 'newMember',
+          type: 'rawlist',
+          message: 'Do you like add a new Member, Choos one please: ',
+          choices:['Engineer','Intern','None']
+          
+        },
 
     ]);
   };
   
-        /*We add a newline character to the command line argument
-      .then(answers =>{
-          console.log('Answer:  ',answers)
-       
-      })
-     
-   
-
-  
-
-      // We add a newline character to the command line argument
-      fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
-        err ? console.error(err) : console.log('Commit logged!')
-      );
-      
-   */
+ 
   const generateHTMLMAnager = (answers) =>
   `<!DOCTYPE html>
   <html lang="en">
-  <title>Organigrama</title>
+  <title>Manager</title>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Reedme</title>
+    
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4"> Team Name  ${answers.nameTeam}</h1>
+
+    <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">{{ name }}${answers.nameManager} </h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}${answers.roleManager} </h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: {{ id }}${answers.idManager} </li>
+            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}${answers.emailManager} </a></li>
+            <li class="list-group-item">Office number: {{ officeNumber }}${answers.officeNumber} </li>
+        </ul>
+    </div>
+</div>
+
+
+      <h1 class="display-4"> Team Name ${answers.nameTeam} </h1>
       <p class="lead">Description.</p>
-      <h3>Name: ${answers.amePerson} <span class="badge badge-secondary">Job Position : ${answers.title}</span></h3>
+      <h3>Name: ${answers.nameManager} <span class="badge badge-secondary">Job Position : ${answers.roleManager}</span></h3>
       <ul class="list-group">
-        <li class="list-group-item"> <b>Id:</b>  :${answers.id}</li>
-        <li class="list-group-item"><b>Email:</b>  ${answers.email}</li>
+        <li class="list-group-item"> <b>Id:</b>  :${answers.idManager}</li>
+        <li class="list-group-item"><b>Email:</b>  ${answers.emailManager}</li>
         <li class="list-group-item"><b>Office number:</b>  ${answers.officeNumber}</li>
-        <li class="list-group-item"><b>Menu :</b> ${answers.menu}</li>
       </ul>
     </div>
   </div>
@@ -112,7 +101,7 @@ const promptUser = () => {
   </html>`;
   
   // Bonus using async/await and try/catch
-  const init = async () => {
+  const manager = async () => {
     console.log('Please answer the questions' );
     try {
       const answers = await promptUser();
@@ -127,4 +116,4 @@ const promptUser = () => {
     }
   };
   
-  init();
+  manager();
