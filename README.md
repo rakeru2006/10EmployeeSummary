@@ -27,7 +27,7 @@ and can visualize in [Github pages](https://rakeru2006.github.io/10EmployeeSumma
   ***
   General information about this project.
 
-  The project must prompt the user to build an engineering team. An engineering
+  The project must prompt the user to build an engineering team. Ibuild a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person.
   
 ## License :cop: :guardsman: :key:
   ***
@@ -73,11 +73,36 @@ We are going to create this code to show, help and Learn and experiment
 
 Small description step by step that tells how to run and develop the aplication 
 
-''' 1. Run '''
+In the `Develop` folder, there is a `package.json`, so make sure you are `sudo` administrator to instal dependences 
 
+```
+ `npm install`
+ 
+ npm i inquirer
+ npm i jestjs
+ npm i util
+ npm init 
+ 
+```
 
+Run ` node index.js` to create de index.html file 
 
+Create multiple HTML templates for each type of user. 
 
+In the `Develop/test` folder, run
+```
+ node managerInformation.js
+ node engineerInformation.js
+ node internInformation.js
+
+```
+This generated the followed files 
+
+  * `engineer.html`
+  
+  * `intern.html`
+  
+  * `manager.html`
 
 
 ## Tests :eyes: 
@@ -87,7 +112,8 @@ Demo aplication
 
 
 
-![algo](https://pbs.twimg.com/profile_images/1053055123193122816/IUwo6l_Q_400x400.jpg)
+![demo1](https://pbs.twimg.com/profile_images/1053055123193122816/managerinf.jpg)
+![demo2](https://pbs.twimg.com/profile_images/1053055123193122816/information.jpg)
 
 ## Contributing  :man_with_gua_pi_mao:
 ***
